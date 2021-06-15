@@ -18,6 +18,15 @@ downBtn.addEventListener('click', () => {
   changeSlide('down')
 })
 
+// управление клавишами с клавиатуры
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'ArrowUp') {
+    changeSlide('up')
+  } else if (event.key === 'ArrowDown') {
+    changeSlide('down')
+  }
+})
+
 function changeSlide(direction) {
   if (direction === 'up') {
     activeSlideIndex++
